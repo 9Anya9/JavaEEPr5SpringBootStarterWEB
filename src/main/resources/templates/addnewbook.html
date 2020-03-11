@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Add new book</title>
+</head>
+<body>
+<h2>Add Book</h2>
+<form action="/add-book" method="post">
+    ISBN:
+    <input type="text" name="isbn"/>
+    Title:
+    <input type="text" name="title"/>
+    Author:
+    <input type="text" name="author"/>
+    <br>
+    <br>
+    <input type="submit" value="Add" name="Submit"/>
+</form>
+</body>
+</html>

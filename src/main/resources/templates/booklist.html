@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Book List</title>
+</head>
+<body>
+<h2>BOOK LIST</h2>
+<table  border="1" cellspacing="0" cellpadding="12">
+    <thead>
+    <th>ISBN</th>
+    <th>Author</th>
+    <th>Title</th>
+    </thead>
+    <tbody>
+    <tr th:each="book: ${books}">
+        <td width="200" height="50" th:text="${book.isbn}"></td>
+        <td width="200" height="50" th:text="${book.author}"></td>
+        <td width="200" height="50" th:text="${book.title}"></td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<form method="GET" action="/rediraddbook">
+    <input type="submit" value="New"/>
+</form>
+</body>
+</html>
